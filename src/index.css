@@ -30,15 +30,18 @@
   color: #FF5E5E;
 }
 .content {
-  max-width: 600px;
+  max-width: 800px;
   margin: 40px auto;
   padding: 20px;
 }
 
 /*Synonyms Page*/
 .Synonym {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
 }
-.Synonym .addSynonym {
+.Synonym .addSynonym, .flashcard h1, .displaySynonym h1 {
   text-align: center;
   max-width: 400px;
   margin: 0 auto;
@@ -50,7 +53,7 @@
 }
 .Synonym h1 {
   font-size: 30px;
-  color: #FF5E5E;
+  color: #d90166;
   margin-bottom: 30px;
 }
 .Synonym input{
@@ -72,4 +75,23 @@
 
 .Synonym .displaySynonym{
   margin: 20px auto;
+}
+
+.Synonym .flashcard{
+  margin-top: 20px;
+}
+
+.Synonym .buttons .leftBtn{
+  margin: 20px 390px 20px 0;
+  background: blue;
+
+}
+
+.Synonym .buttons .rightBtn{
+  background: blue;
+}
+
+/*Landing Page*/
+.LandingPage{
+  max-width: 800px;
 }

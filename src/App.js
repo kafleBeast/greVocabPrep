@@ -25,6 +25,7 @@ function App() {
             <Route path="/Synonym">
               <Synonym />
             </Route>
+
             <Route path="*">
               <NotFound />
             </Route>

@@ -3,7 +3,7 @@
     {
       "word": "austere",
       "synonym": [
-        "severe ",
+        "severe",
         "stern",
         "strict",
         "harsh",
@@ -290,6 +290,42 @@
         "unreserved"
       ],
       "id": 13
+    },
+    {
+      "word": "desultory",
+      "synonym": [
+        "casual",
+        "half-hearted",
+        "lukewarm",
+        "cursory",
+        "superficial",
+        "token",
+        "perfunctory",
+        "passing",
+        "incidental",
+        "sketchy",
+        "haphazard",
+        "random",
+        "aimless",
+        "rambling",
+        "erratic",
+        "unmethodical",
+        "unsystematic",
+        "automatic",
+        "unthinking",
+        "capricious",
+        "mechanical",
+        "offhand",
+        "chaotic",
+        "inconsistent",
+        "irregular",
+        "intermittent",
+        "occasional",
+        "sporadic",
+        "inconstant",
+        "fitful"
+      ],
+      "id": 14
     }
   ]
 }

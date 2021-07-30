@@ -1,27 +1,34 @@
 import useFetch from './useFetch';
+import React, { Component } from 'react'
+import { FlashcardComponent } from 'react-flashcard'
 import { useState, useEffect } from 'react';
-import { useHistory, useParams } from "react-router-dom";
 import * as ReactBootStrap from "react-bootstrap";
-import { render } from '@testing-library/react';
 
 const Synonym = () => {
     const [word, setWord] = useState('');
-    const history = useHistory();
-    // const [synonym, setSynonym] = useState([]);
-    // const word = "austere";
-    // setWord("austere");
+    const [FlashcardBtn, setFlashcardBtn] = useState(true);
+    const [wordListBtn, setWordListBtn] = useState(false);
     let url = "https://api.dictionaryapi.dev/api/v2/entries/en_US/" + word;
     const {data, error:errorRetrieve, isPending:isPendingRetrieve} = useFetch(url);
-
+    // console.log(data && data[0].meanings[0].definitions[0].synonyms);
     const synonym = data && data[0].meanings[0].definitions[0].synonyms;    
     // console.log('word:' + word);
-    // console.log('synonyms: ' + synonym);
-
-    const { id } = useParams();
+    // console.log(synonym);
     const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('http://localhost:8001/synonyms/');
 
-    console.log(dispWord && dispWord);
+    // console.log(dispWord && dispWord);
+    const flashCardControl = (e) => {
+        e.preventDefault();
+        setFlashcardBtn(true);
+        setWordListBtn(false);
+    }
 
+    const wordListControl = (e) => {
+        e.preventDefault();
+        setWordListBtn(true);
+        setFlashcardBtn(false);
+
+    }
     const handleSubmit = (e) => {
         e.preventDefault();
         
@@ -32,7 +39,6 @@ const Synonym = () => {
         }).then(() => {
             window.location.reload ();
         }) 
-
     }
 
     const handleDelete = () => {
@@ -41,23 +47,45 @@ const Synonym = () => {
         }) 
     }
 
-    const renderWords = (words, index) => {
-        const tempvar = [...words.synonym];
-        let valuesM = []
-        for(let i=0;i<tempvar.length;i++){
-            valuesM.push(" "+tempvar[i]+ "," +" ");
+    const editSynonyms = (words) =>{
+        const synonymList = [...words.synonym];
+        let editedSynonyms = [];
+        for(let i=0;i<synonymList.length;i++){
+            editedSynonyms.push(" "+synonymList[i]+ "," +" ");
         }
+        return editedSynonyms;
+    }
+
+    {dispWord && console.log(editSynonyms(dispWord[0]))}
+    const renderWords = (words, index) => {
+        const editedSynonyms = editSynonyms(words);
         return(
             <tr key = {index}>
                 <td>{words.word}</td>
-                <td>{valuesM}</td>
+                <td>{editedSynonyms}</td>
             </tr>
         );
     };
+    var cardData = [];
+    // console.log(dispWord && [...dispWord.synonym]);
 
-    useEffect(()=>{
-
-    },[word])
+    const createFlashCards = () =>{
+        var editedSynonyms = [];
+        for (let i=0; i<dispWord.length;i++){
+            editedSynonyms = editSynonyms(dispWord[i]);
+            cardData.push({
+                front:{
+                    text: dispWord[i].word,
+                },
+                back:{
+                    text: editedSynonyms,
+                }
+            })
+        }
+        return cardData;
+    }
+    // console.log(dispWord && createFlashCards(dispWord));
+    
    
     return ( 
         <div className="Synonym">
@@ -76,8 +104,17 @@ const Synonym = () => {
                 </form>
                 {console.log(word&& word)}
             </div>
+            <div className="buttons">
+                <button className ="leftBtn" onClick={flashCardControl}>Flash Card</button>
+                <button className ="rightBtn" onClick={wordListControl}>Word List</button>
+            </div>
+            {FlashcardBtn && <div className="flashcard">
+                <h1>Flash Cards</h1>
+                {dispWord && <FlashcardComponent dataSource={createFlashCards(dispWord)} />}
+            </div>}
 
-            <div className="displaySynonym">
+            {wordListBtn && <div className="displaySynonym">
+                <h1>List of Words</h1>
                 {<ReactBootStrap.Table hover bordered size="md">
                     <thead>
                         <tr>
@@ -91,8 +128,8 @@ const Synonym = () => {
                         {dispWord && dispWord.map(renderWords)}
                     </tbody>
                 </ReactBootStrap.Table>}
-
-            </div>
+            </div>}
+            
         </div>
      );
 }
