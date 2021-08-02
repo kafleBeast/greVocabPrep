@@ -1,9 +1,12 @@
 import useFetch from './useFetch';
 import React from 'react'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as ReactBootStrap from "react-bootstrap";
 
 const Quiz = () => {
+    useEffect(()=>{
+        document.title="Quiz";
+    })
     const [length, setLength] = useState(10);
     const [set, setSet] = useState(1);
     const [quizType, setQuizType] = useState("synonym");

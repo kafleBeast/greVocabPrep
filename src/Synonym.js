@@ -1,10 +1,13 @@
 import useFetch from './useFetch';
 import React from 'react'
 import { FlashcardComponent } from 'react-flashcard'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as ReactBootStrap from "react-bootstrap";
 
 const Synonym = () => {
+    useEffect(()=>{
+        document.title="Synonym";
+    })
     const [word, setWord] = useState('');
     const [FlashcardBtn, setFlashcardBtn] = useState(false);
     const [wordListBtn, setWordListBtn] = useState(true);

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 
 
 // const set1Words = ["abound","amorphous","belie", "capricious","cerebral","congenial",
@@ -23,10 +25,11 @@
 //             "deference","desultory","diffident","dilatory","equivocate",
 //             "polarize","prodigal","verbose"
 // ];
-
+// window.location.reload()
 const LandingPage = () => {
-    
-
+    useEffect(()=>{
+        document.title="GRE Verbal Prep";
+    })
     return ( 
         <div className="LandingPage">
             <h1>Vocabulary, thy wretched adversary!</h1>
