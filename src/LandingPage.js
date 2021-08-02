@@ -35,13 +35,12 @@ const LandingPage = () => {
     const wordCloud = [];
     const size = [1600, 500];
 
-    const [loadingMsg, setLoadingMsg] = useState("");
     const randomIntFromInterval = (min, max) => { // min and max included 
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
 
 
-    const { data: words, isPending:isPendingWords } = useFetch('http://localhost:8001/synonyms/');
+    const { data: words} = useFetch('http://localhost:8001/synonyms/');
 
     if(words){
         for(let i=0; i < words.length; i++){
