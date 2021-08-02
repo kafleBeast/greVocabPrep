@@ -1,4 +1,7 @@
+import { useState } from "react";
 import { useEffect } from "react";
+import ReactWordcloud from 'react-wordcloud';
+import useFetch from './useFetch';
 
 
 
@@ -26,7 +29,50 @@ import { useEffect } from "react";
 //             "polarize","prodigal","verbose"
 // ];
 // window.location.reload()
+
+
 const LandingPage = () => {
+    const wordCloud = [];
+    const size = [1600, 500];
+
+    const [loadingMsg, setLoadingMsg] = useState("");
+    const randomIntFromInterval = (min, max) => { // min and max included 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+
+    const { data: words, isPending:isPendingWords } = useFetch('http://localhost:8001/synonyms/');
+
+    if(words){
+        for(let i=0; i < words.length; i++){
+            wordCloud.push(
+                {
+                    text: words[i].word,
+                    value: randomIntFromInterval(60,100),
+                }
+            );
+        }
+        
+        for (let i=0; i<words.length;i++){
+            for(let j=0;j<words[i].synonym.length;j++){
+                wordCloud.push(
+                    {
+                        text: words[i].synonym[j],
+                        value: randomIntFromInterval(40,100),
+                    }
+                );
+            }
+        }
+    }
+    
+    
+    
+
+    // }
+    // else{
+    //     
+    // }
+    
     useEffect(()=>{
         document.title="GRE Verbal Prep";
     })
@@ -40,9 +86,13 @@ const LandingPage = () => {
                     also add your own words to your profile. There will be quizzes 
                     that will ask you to match definitions or synonyms.
                 </p> */}
-                <p>Hello Lads, Welcome to my site. Here we can learn vocabularies
-                together 
-                </p>
+                <p>All the words that you add to your list appear here.</p>
+                <p>These are the words that have already been added to the list...</p>
+
+                <div className="wordCloud">
+                    <ReactWordcloud size = {size} words={wordCloud} />
+                </div>
+
             </div>
         </div>
      );

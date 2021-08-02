@@ -115,8 +115,8 @@ const Synonym = () => {
                 {/* {console.log(word&& word)} */}
             </div>
             <div className="buttons">
-                <button className ="leftBtn" onClick={flashCardControl}>Flash Card</button>
-                <button className ="rightBtn" onClick={wordListControl}>Word List</button>
+                <button className ="leftBtn" onClick={() => flashCardControl}>Flash Card</button>
+                <button className ="rightBtn" onClick={() => wordListControl}>Word List</button>
             </div>
             {FlashcardBtn && <div className="flashcard">
                 <h1>Flash Cards</h1>
