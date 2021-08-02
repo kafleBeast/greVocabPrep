@@ -19,7 +19,7 @@ const Synonym = () => {
 
     // console.log('word:' + word);
     // console.log(synonym);
-    const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('http://localhost:8001/synonyms/');
+    const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('https://abhishekkafle.com.np/synonyms/');
 
     // console.log(dispWord && dispWord);
     const flashCardControl = (e) => {
@@ -36,7 +36,7 @@ const Synonym = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(synonym){
-            fetch("http://localhost:8001/synonyms/",{
+            fetch("https://abhishekkafle.com.np/synonyms/",{
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({word, synonym})

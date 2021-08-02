@@ -39,7 +39,7 @@ const LandingPage = () => {
     }
 
 
-    const { data: words} = useFetch('http://localhost:8001/synonyms/');
+    const { data: words} = useFetch('https://abhishekkafle.com.np/synonyms/');
 
     if(words){
         for(let i=0; i < words.length; i++){

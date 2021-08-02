@@ -15,8 +15,8 @@ const Quiz = () => {
     const [definitionQuizControl, setDefinitionQuizControl] = useState(false);
     const [quizResultOut, setQuizResultOut] = useState(false);
 
-    const { data: synonymData, error:errorSynonym, isPending:isPendingSynonym } = useFetch('http://localhost:8001/synonyms/');
-    const {data: definitionData, error: errorDefinition, isPending: isPendingDefinition} = useFetch('http://localhost:8001/definitions/');
+    const { data: synonymData, error:errorSynonym, isPending:isPendingSynonym } = useFetch('https://abhishekkafle.com.np/synonyms/');
+    const {data: definitionData, error: errorDefinition, isPending: isPendingDefinition} = useFetch('https://abhishekkafle.com.np/definitions/');
 
     // console.log(definitionData && definitionData);
 
