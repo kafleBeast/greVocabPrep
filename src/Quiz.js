@@ -34,7 +34,7 @@ const Quiz = () => {
     const editedList = (words) =>{
         let editedSynonyms = [];
         for(let i=0;i<words.length;i++){
-            editedSynonyms.push("<> "+words[i]+ "," +" ");
+            editedSynonyms.push("<> ", words[i], ", ");
         }
         return editedSynonyms;
     }

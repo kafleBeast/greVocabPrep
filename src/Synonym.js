@@ -57,7 +57,7 @@ const Synonym = () => {
         const synonymList = [...words.synonym];
         let editedSynonyms = [];
         for(let i=0;i<synonymList.length;i++){
-            editedSynonyms.push(" "+synonymList[i]+ "," +" ");
+            editedSynonyms.push(" ", synonymList[i], ", ");
         }
         return editedSynonyms;
     }
