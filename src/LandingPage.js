@@ -1,28 +1,28 @@
 
 
-const set1Words = ["abound","amorphous","belie", "capricious","cerebral","congenial",
-            "conspicuous","cursory","daunting","deify","didactic","disseminate",
-            "feasible","flout", "homogeneous","humdrum","insipid","loquacious",
-            "misanthropic","misnomer","negligent","obsequious","placate",
-            "proclivity","puerile","quixotic","spendthrift","taciturn",
-            "wary","austere"
-];
+// const set1Words = ["abound","amorphous","belie", "capricious","cerebral","congenial",
+//             "conspicuous","cursory","daunting","deify","didactic","disseminate",
+//             "feasible","flout", "homogeneous","humdrum","insipid","loquacious",
+//             "misanthropic","misnomer","negligent","obsequious","placate",
+//             "proclivity","puerile","quixotic","spendthrift","taciturn",
+//             "wary","austere"
+// ];
 
-const set2Words = ["adulterate","advocate","aggrandize","alacrity","ambivalent",
-            "ameliorate","amenable","anachronistic","audacious","avaricious",
-            "banal","benign","brazen","calumny","candid","castigate","caustic",
-            "construe","contrite","convoluted","covet","craven","decorum",
-            "deft","demur","derivative","dessicate","diatribe","incredulous",
-            "ingenuous"
-];
+// const set2Words = ["adulterate","advocate","aggrandize","alacrity","ambivalent",
+//             "ameliorate","amenable","anachronistic","audacious","avaricious",
+//             "banal","benign","brazen","calumny","candid","castigate","caustic",
+//             "construe","contrite","convoluted","covet","craven","decorum",
+//             "deft","demur","derivative","dessicate","diatribe","incredulous",
+//             "ingenuous"
+// ];
 
-const set3Words = ["abate","abjure","anomalous","antipathy","arcane","arduous",
-            "artless","ascetic","assuage","betray","bucolic","burgeon",
-            "cacophonous","canonize","censure","chicanery","coalesce",
-            "cogent","compelling","contend","copious","cosmopolitan",
-            "deference","desultory","diffident","dilatory","equivocate",
-            "polarize","prodigal","verbose"
-];
+// const set3Words = ["abate","abjure","anomalous","antipathy","arcane","arduous",
+//             "artless","ascetic","assuage","betray","bucolic","burgeon",
+//             "cacophonous","canonize","censure","chicanery","coalesce",
+//             "cogent","compelling","contend","copious","cosmopolitan",
+//             "deference","desultory","diffident","dilatory","equivocate",
+//             "polarize","prodigal","verbose"
+// ];
 
 const LandingPage = () => {
     

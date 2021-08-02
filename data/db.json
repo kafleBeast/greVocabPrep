@@ -326,6 +326,183 @@
         "fitful"
       ],
       "id": 14
+    },
+    {
+      "word": "assuage",
+      "synonym": [
+        "relieve",
+        "ease",
+        "alleviate",
+        "soothe",
+        "mitigate",
+        "dampen",
+        "allay",
+        "calm",
+        "palliate",
+        "abate",
+        "lull",
+        "temper",
+        "suppress",
+        "smother",
+        "stifle",
+        "subdue",
+        "tranquillize",
+        "mollify",
+        "moderate",
+        "modify",
+        "tone down",
+        "attenuate",
+        "dilute",
+        "lessen",
+        "diminish",
+        "decrease",
+        "reduce",
+        "lower"
+      ],
+      "id": 15
+    },
+    {
+      "word": "prudent",
+      "synonym": [
+        "wise",
+        "well judged",
+        "judicious",
+        "sagacious",
+        "sage",
+        "shrewd",
+        "advisable",
+        "well advised",
+        "politic",
+        "sensible",
+        "commonsensical"
+      ],
+      "id": 16
+    },
+    {
+      "word": "grim",
+      "synonym": [
+        "stern",
+        "forbidding",
+        "uninviting",
+        "unapproachable",
+        "aloof",
+        "distant"
+      ],
+      "id": 17
+    },
+    {
+      "word": "aloof",
+      "synonym": [
+        "distant",
+        "detached",
+        "unresponsive",
+        "remote",
+        "unapproachable",
+        "forbidding",
+        "stand-offish",
+        "formal",
+        "impersonal",
+        "stiff",
+        "austere",
+        "stuffy",
+        "withdrawn",
+        "reserved",
+        "unforthcoming",
+        "uncommunicative",
+        "indifferent"
+      ],
+      "id": 18
+    },
+    {
+      "word": "celibate",
+      "synonym": [
+        "abstainer",
+        "recluse",
+        "hermit",
+        "solitary",
+        "anchorite",
+        "anchoress",
+        "desert saint",
+        "celibate",
+        "puritan",
+        "nun",
+        "monk"
+      ],
+      "id": 19
+    },
+    {
+      "word": "prolix",
+      "synonym": [
+        "lengthy",
+        "long-winded",
+        "long-drawn-out",
+        "overlong",
+        "prolonged",
+        "protracted",
+        "interminable",
+        "laborious",
+        "ponderous",
+        "endless",
+        "unending",
+        "verbose",
+        "wordy",
+        "full of verbiage",
+        "verbal",
+        "diffuse",
+        "discursive",
+        "digressive",
+        "rambling",
+        "wandering",
+        "circuitous",
+        "meandering",
+        "maundering",
+        "periphrastic",
+        "circumlocutory"
+      ],
+      "id": 20
+    }
+  ],
+  "definitions": [
+    {
+      "word": "dilatory",
+      "definition": "Slow to act.",
+      "exampleSentence": "he had been dilatory in appointing a solicitor",
+      "id": 1
+    },
+    {
+      "word": "desultory",
+      "definition": "Lacking a plan, purpose, or enthusiasm.",
+      "exampleSentence": "a few people were left, dancing in a desultory fashion",
+      "id": 2
+    },
+    {
+      "word": "circumspect",
+      "definition": "Wary and unwilling to take risks.",
+      "exampleSentence": "the officials were very circumspect in their statements",
+      "id": 3
+    },
+    {
+      "word": "stringy",
+      "definition": "(especially of hair) resembling string; long, thin, and lusterless.",
+      "exampleSentence": "her hair was stringy and uncombed",
+      "id": 4
+    },
+    {
+      "word": "stringent",
+      "definition": "(of regulations, requirements, or conditions) strict, precise, and exacting.",
+      "exampleSentence": "California's air pollution guidelines are stringent",
+      "id": 5
+    },
+    {
+      "word": "stingy",
+      "definition": "Unwilling to give or spend; ungenerous.",
+      "id": 6
+    },
+    {
+      "word": "cursory",
+      "definition": "Hasty and therefore not thorough or detailed.",
+      "exampleSentence": "a cursory glance at the figures",
+      "id": 7
     }
   ]
 }

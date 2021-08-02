@@ -11,13 +11,15 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
 .navbar h1 {
   color: #FF5E5E;
 }
+
+
 .navbar .links {
   margin-left: auto;
 }
@@ -25,9 +27,12 @@
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
+  color: white;
+  background-color: #FF5E5E;
+  border-radius: 8px;
 }
 .navbar a:hover {
-  color: #FF5E5E;
+  background: #ff375a;
 }
 .content {
   max-width: 800px;
@@ -38,7 +43,7 @@
 /*Synonyms Page*/
 .Synonym {
   max-width: 600px;
-  margin: 40px auto;
+  margin: -40px auto;
   padding: 20px;
 }
 .Synonym .addSynonym, .flashcard h1, .displaySynonym h1 {
@@ -72,9 +77,13 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.Synonym button:hover{
+  background: #ff375a;
+}
 
-.Synonym .displaySynonym{
-  margin: 20px auto;
+.Synonym .tableTitle{
+  text-align: center;
+  font-size: 1.2em;
 }
 
 .Synonym .flashcard{
@@ -84,14 +93,147 @@
 .Synonym .buttons .leftBtn{
   margin: 20px 390px 20px 0;
   background: blue;
-
 }
 
 .Synonym .buttons .rightBtn{
   background: blue;
 }
 
+.Synonym .buttons .rightBtn:hover{
+  background: #6262ff;
+}
+.Synonym .buttons .leftBtn:hover{
+  background: #6262ff;
+}
+
+
 /*Landing Page*/
 .LandingPage{
   max-width: 800px;
+}
+
+/*Definitions Page*/
+
+.Definition {
+  max-width: 600px;
+  margin: -40px auto;
+  padding: 20px;
+}
+.Definition .addDefinition, .flashcard h1, .displayDefinition h1 {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+
+}
+.Definition label {
+  text-align: left;
+  display: block;
+}
+.Definition h1 {
+  font-size: 30px;
+  color: #d90166;
+  margin-bottom: 30px;
+}
+.Definition input{
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.Definition button {
+  background: #FF5E5E;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.Definition button:hover{
+  background: #ff375a;
+}
+
+.Definition .tableTitle{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.Definition .flashcard{
+  margin-top: 20px;
+}
+
+.Definition .buttons .leftBtn{
+  margin: 20px 390px 20px 0;
+  background: blue;
+}
+
+.Definition .buttons .rightBtn{
+  background: blue;
+}
+
+.Definition .buttons .rightBtn:hover{
+  background: #6262ff;
+}
+.Definition .buttons .leftBtn:hover{
+  background: #6262ff;
+}
+
+
+/* Quiz Page */
+
+.Quiz {
+  max-width: 600px;
+  margin: -40px auto;
+  padding: 20px;
+}
+
+.Quiz label {
+  text-align: left;
+  display: block;
+}
+.Quiz h1 {
+  text-align: center;
+  font-size: 30px;
+  color: #d90166;
+  margin-bottom: 30px;
+}
+.Quiz input{
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.Quiz button {
+  background: #FF5E5E;
+  color: #fff;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.Quiz button:hover{
+  background: #ff375a;
+}
+.Quiz select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+}
+
+
+.Quiz button {
+  background: #FF5E5E;
+  color: #fff;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.Quiz button:hover{
+  background: #ff375a;
 }
