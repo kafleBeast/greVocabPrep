@@ -1,0 +1,530 @@
+{
+  "synonyms": [
+    {
+      "word": "austere",
+      "synonym": [
+        "severe",
+        "stern",
+        "strict",
+        "harsh",
+        "unfeeling",
+        "stony",
+        "steely",
+        "flinty",
+        "dour",
+        "grim",
+        "cold",
+        "frosty",
+        "frigid",
+        "icy",
+        "chilly",
+        "unemotional",
+        "unfriendly",
+        "formal",
+        "stiff",
+        "stuffy",
+        "reserved",
+        "remote",
+        "distant",
+        "aloof",
+        "forbidding",
+        "mean-looking",
+        "grave",
+        "solemn",
+        "serious",
+        "unsmiling",
+        "unsympathetic",
+        "unforgiving",
+        "uncharitable"
+      ],
+      "id": 1
+    },
+    {
+      "word": "ascetic",
+      "synonym": [
+        "abstainer",
+        "recluse",
+        "hermit",
+        "solitary",
+        "anchorite",
+        "anchoress",
+        "desert saint",
+        "celibate",
+        "puritan",
+        "nun",
+        "monk"
+      ],
+      "id": 2
+    },
+    {
+      "word": "wary",
+      "synonym": [
+        "cautious",
+        "careful",
+        "circumspect",
+        "on one's guard",
+        "chary",
+        "alert",
+        "on the alert",
+        "on the lookout",
+        "on the qui vive",
+        "prudent"
+      ],
+      "id": 3
+    },
+    {
+      "word": "dilatory",
+      "synonym": [
+        "slow",
+        "unhurried",
+        "tardy",
+        "unpunctual",
+        "lax",
+        "slack",
+        "sluggish",
+        "sluggardly",
+        "snail-like",
+        "tortoise-like",
+        "lazy",
+        "idle",
+        "indolent",
+        "slothful"
+      ],
+      "id": 4
+    },
+    {
+      "word": "diffident",
+      "synonym": [
+        "shy",
+        "bashful",
+        "modest",
+        "self-effacing",
+        "unassuming",
+        "unpresuming",
+        "humble",
+        "meek",
+        "unconfident",
+        "unassertive",
+        "timid",
+        "timorous",
+        "shrinking",
+        "reserved",
+        "withdrawn",
+        "introverted",
+        "inhibited"
+      ],
+      "id": 5
+    },
+    {
+      "word": "obsequious",
+      "synonym": [
+        "servile",
+        "ingratiating",
+        "unctuous",
+        "sycophantic",
+        "fawning",
+        "toadying",
+        "oily",
+        "oleaginous",
+        "greasy",
+        "grovelling",
+        "cringing",
+        "toadyish",
+        "sycophantish",
+        "subservient",
+        "submissive",
+        "slavish",
+        "abject",
+        "Uriah Heepish"
+      ],
+      "id": 6
+    },
+    {
+      "word": "conspicuous",
+      "synonym": [
+        "obvious",
+        "clear",
+        "plain",
+        "evident",
+        "apparent",
+        "manifest",
+        "self-evident"
+      ],
+      "id": 7
+    },
+    {
+      "word": "loquacious",
+      "synonym": [
+        "talkative",
+        "garrulous",
+        "voluble",
+        "over-talkative",
+        "long-winded",
+        "wordy",
+        "verbose",
+        "profuse",
+        "prolix",
+        "effusive",
+        "gushing",
+        "rambling"
+      ],
+      "id": 8
+    },
+    {
+      "word": "banal",
+      "synonym": [
+        "trite",
+        "hackneyed",
+        "clichéd",
+        "platitudinous",
+        "vapid",
+        "commonplace",
+        "ordinary",
+        "common",
+        "stock",
+        "conventional",
+        "stereotyped",
+        "predictable",
+        "overused",
+        "overdone",
+        "overworked",
+        "stale",
+        "worn out",
+        "time-worn",
+        "tired",
+        "threadbare",
+        "hoary",
+        "hack",
+        "unimaginative",
+        "unoriginal",
+        "derivative",
+        "uninspired",
+        "prosaic",
+        "dull",
+        "boring",
+        "pedestrian",
+        "run-of-the-mill",
+        "routine",
+        "humdrum"
+      ],
+      "id": 9
+    },
+    {
+      "word": "humdrum",
+      "synonym": [
+        "weariness",
+        "ennui",
+        "lack of enthusiasm",
+        "lack of interest",
+        "lack of concern",
+        "apathy",
+        "uninterestedness",
+        "unconcern",
+        "languor",
+        "sluggishness",
+        "accidie",
+        "malaise",
+        "world-weariness"
+      ],
+      "id": 10
+    },
+    {
+      "word": "stable",
+      "synonym": [
+        "firm",
+        "solid",
+        "steady",
+        "secure",
+        "fixed",
+        "strong",
+        "fast",
+        "stout",
+        "sturdy",
+        "safe",
+        "moored",
+        "anchored",
+        "stuck down",
+        "immovable",
+        "well built",
+        "well constructed",
+        "substantial"
+      ],
+      "id": 11
+    },
+    {
+      "word": "circumspect",
+      "synonym": [
+        "cautious",
+        "wary",
+        "careful",
+        "chary",
+        "guarded",
+        "on one's guard"
+      ],
+      "id": 12
+    },
+    {
+      "word": "voluble",
+      "synonym": [
+        "talkative",
+        "loquacious",
+        "garrulous",
+        "verbose",
+        "long-winded",
+        "wordy",
+        "chatty",
+        "chattery",
+        "gossipy",
+        "chattering",
+        "babbling",
+        "blathering",
+        "prattling",
+        "jabbering",
+        "effusive",
+        "gushing",
+        "forthcoming",
+        "conversational",
+        "communicative",
+        "expansive",
+        "open",
+        "unreserved"
+      ],
+      "id": 13
+    },
+    {
+      "word": "desultory",
+      "synonym": [
+        "casual",
+        "half-hearted",
+        "lukewarm",
+        "cursory",
+        "superficial",
+        "token",
+        "perfunctory",
+        "passing",
+        "incidental",
+        "sketchy",
+        "haphazard",
+        "random",
+        "aimless",
+        "rambling",
+        "erratic",
+        "unmethodical",
+        "unsystematic",
+        "automatic",
+        "unthinking",
+        "capricious",
+        "mechanical",
+        "offhand",
+        "chaotic",
+        "inconsistent",
+        "irregular",
+        "intermittent",
+        "occasional",
+        "sporadic",
+        "inconstant",
+        "fitful"
+      ],
+      "id": 14
+    },
+    {
+      "word": "assuage",
+      "synonym": [
+        "relieve",
+        "ease",
+        "alleviate",
+        "soothe",
+        "mitigate",
+        "dampen",
+        "allay",
+        "calm",
+        "palliate",
+        "abate",
+        "lull",
+        "temper",
+        "suppress",
+        "smother",
+        "stifle",
+        "subdue",
+        "tranquillize",
+        "mollify",
+        "moderate",
+        "modify",
+        "tone down",
+        "attenuate",
+        "dilute",
+        "lessen",
+        "diminish",
+        "decrease",
+        "reduce",
+        "lower"
+      ],
+      "id": 15
+    },
+    {
+      "word": "prudent",
+      "synonym": [
+        "wise",
+        "well judged",
+        "judicious",
+        "sagacious",
+        "sage",
+        "shrewd",
+        "advisable",
+        "well advised",
+        "politic",
+        "sensible",
+        "commonsensical"
+      ],
+      "id": 16
+    },
+    {
+      "word": "grim",
+      "synonym": [
+        "stern",
+        "forbidding",
+        "uninviting",
+        "unapproachable",
+        "aloof",
+        "distant"
+      ],
+      "id": 17
+    },
+    {
+      "word": "aloof",
+      "synonym": [
+        "distant",
+        "detached",
+        "unresponsive",
+        "remote",
+        "unapproachable",
+        "forbidding",
+        "stand-offish",
+        "formal",
+        "impersonal",
+        "stiff",
+        "austere",
+        "stuffy",
+        "withdrawn",
+        "reserved",
+        "unforthcoming",
+        "uncommunicative",
+        "indifferent"
+      ],
+      "id": 18
+    },
+    {
+      "word": "celibate",
+      "synonym": [
+        "abstainer",
+        "recluse",
+        "hermit",
+        "solitary",
+        "anchorite",
+        "anchoress",
+        "desert saint",
+        "celibate",
+        "puritan",
+        "nun",
+        "monk"
+      ],
+      "id": 19
+    },
+    {
+      "word": "prolix",
+      "synonym": [
+        "lengthy",
+        "long-winded",
+        "long-drawn-out",
+        "overlong",
+        "prolonged",
+        "protracted",
+        "interminable",
+        "laborious",
+        "ponderous",
+        "endless",
+        "unending",
+        "verbose",
+        "wordy",
+        "full of verbiage",
+        "verbal",
+        "diffuse",
+        "discursive",
+        "digressive",
+        "rambling",
+        "wandering",
+        "circuitous",
+        "meandering",
+        "maundering",
+        "periphrastic",
+        "circumlocutory"
+      ],
+      "id": 20
+    },
+    {
+      "word": "solemn",
+      "synonym": [
+        "dignified",
+        "ceremonious",
+        "ceremonial",
+        "stately",
+        "courtly",
+        "majestic",
+        "imposing",
+        "impressive",
+        "awe-inspiring",
+        "portentous",
+        "splendid",
+        "magnificent",
+        "grand",
+        "important",
+        "august",
+        "formal"
+      ],
+      "id": 21
+    }
+  ],
+  "definitions": [
+    {
+      "word": "dilatory",
+      "definition": "Slow to act.",
+      "exampleSentence": "he had been dilatory in appointing a solicitor",
+      "id": 1
+    },
+    {
+      "word": "desultory",
+      "definition": "Lacking a plan, purpose, or enthusiasm.",
+      "exampleSentence": "a few people were left, dancing in a desultory fashion",
+      "id": 2
+    },
+    {
+      "word": "circumspect",
+      "definition": "Wary and unwilling to take risks.",
+      "exampleSentence": "the officials were very circumspect in their statements",
+      "id": 3
+    },
+    {
+      "word": "stringy",
+      "definition": "(especially of hair) resembling string; long, thin, and lusterless.",
+      "exampleSentence": "her hair was stringy and uncombed",
+      "id": 4
+    },
+    {
+      "word": "stringent",
+      "definition": "(of regulations, requirements, or conditions) strict, precise, and exacting.",
+      "exampleSentence": "California's air pollution guidelines are stringent",
+      "id": 5
+    },
+    {
+      "word": "stingy",
+      "definition": "Unwilling to give or spend; ungenerous.",
+      "id": 6
+    },
+    {
+      "word": "cursory",
+      "definition": "Hasty and therefore not thorough or detailed.",
+      "exampleSentence": "a cursory glance at the figures",
+      "id": 7
+    }
+  ]
+}

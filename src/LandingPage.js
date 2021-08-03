@@ -39,7 +39,7 @@ const LandingPage = () => {
     }
 
 
-    const { data: words} = useFetch('https://abhishekkafle.com.np/synonyms/');
+    const { data: words} = useFetch('https://gre-vocab-prep.herokuapp.com/synonyms');
 
     if(words){
         for(let i=0; i < words.length; i++){

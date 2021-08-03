@@ -15,8 +15,8 @@ const Quiz = () => {
     const [definitionQuizControl, setDefinitionQuizControl] = useState(false);
     const [quizResultOut, setQuizResultOut] = useState(false);
 
-    const { data: synonymData, error:errorSynonym, isPending:isPendingSynonym } = useFetch('https://abhishekkafle.com.np/synonyms/');
-    const {data: definitionData, error: errorDefinition, isPending: isPendingDefinition} = useFetch('https://abhishekkafle.com.np/definitions/');
+    const { data: synonymData, error:errorSynonym, isPending:isPendingSynonym } = useFetch('https://gre-vocab-prep.herokuapp.com/synonyms');
+    const {data: definitionData, error: errorDefinition, isPending: isPendingDefinition} = useFetch('https://gre-vocab-prep.herokuapp.com/definitions');
 
     // console.log(definitionData && definitionData);
 
