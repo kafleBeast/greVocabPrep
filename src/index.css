@@ -280,3 +280,9 @@
 .Admin button:hover{
   background: #ff375a;
 }
+
+.Admin .loginErrMsg{
+  display: flex;
+  justify-content: center;
+  color: blue;
+}

@@ -7,7 +7,7 @@ const Quiz = () => {
     useEffect(()=>{
         document.title="Quiz";
     })
-    const [length, setLength] = useState(10);
+    const [length, setLength] = useState(2);
     const [set, setSet] = useState(1);
     const [quizType, setQuizType] = useState("synonym");
     const [createQuizControl, setCreateQuizControl] = useState(true);

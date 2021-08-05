@@ -26,7 +26,8 @@ const Admin = () => {
         }
         else{
             setLoginErrMsg("The login details do not match to the system. Please try again!")
-
+            setPassword("");
+            setUserName("");
         }
         // if(userName===id){
         //     if(password===pass){
@@ -52,7 +53,7 @@ const Admin = () => {
         <div className="Admin">
             {!loggedIn && <div className="login">
                 <h1>Admin Login</h1>
-                <p>{loginErrMsg}</p>
+                <p className = "loginErrMsg">{loginErrMsg}</p>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <input 
@@ -78,12 +79,7 @@ const Admin = () => {
             </div>}
 
             {loggedIn && <div className="logged-in">
-                
-                
-                
-                
-                
-                
+                <h1 className="admin-control">Welcome Kafle Beast!</h1>
                 
             </div>}
         </div>

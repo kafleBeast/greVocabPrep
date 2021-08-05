@@ -101,11 +101,11 @@ const Synonym = () => {
                 <h1>Add Synonyms</h1>
                 {dataNotFound && <div>{dataNotFound}</div>}
                 <form onSubmit={handleSubmit}>
-                    <label>Word</label>
                     <input 
                     type="text" 
                     required 
                     value={word}
+                    placeholder = {"Type a word"}
                     onChange={(e) => setWord(e.target.value)}
                     />
                     {!isPendingDisp && <button>Add Word</button>}

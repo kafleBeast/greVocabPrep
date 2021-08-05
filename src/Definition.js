@@ -73,11 +73,11 @@ const Definition = () => {
             <div className="addDefinition">
                 <h1>Add Definition</h1>
                 <form onSubmit={handleSubmit}>
-                    <label>Word</label>
                     <input 
                     type="text" 
                     required 
                     value={word}
+                    placeholder = {"Type a word"}
                     onChange={(e) => setWord(e.target.value)}
                     />
                     {!isPendingDisp && <button>Add Word</button>}
