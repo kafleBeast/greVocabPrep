@@ -6,6 +6,8 @@ import Navbar from './Navbar';
 import Quiz from './Quiz';
 import Synonym from './Synonym';
 import NotFound from './NotFound';
+import Admin from './Admin';
+
 function App() {
   return (
     <Router>
@@ -25,7 +27,9 @@ function App() {
             <Route path="/Synonym">
               <Synonym />
             </Route>
-
+            <Route path="/Admin">
+              <Admin />
+            </Route>
             <Route path="*">
               <NotFound />
             </Route>

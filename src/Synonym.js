@@ -1,6 +1,6 @@
 import useFetch from './useFetch';
-import React from 'react'
-import { FlashcardComponent } from 'react-flashcard'
+import React from 'react';
+import { FlashcardComponent } from 'react-flashcard';
 import { useEffect, useState } from 'react';
 import * as ReactBootStrap from "react-bootstrap";
 
@@ -53,11 +53,7 @@ const Synonym = () => {
         }
     }
 
-    // const handleDelete = () => {
-    //     fetch('http://localhost:8001/synonyms/' + dispWord.id, {
-    //       method: 'DELETE'
-    //     }) 
-    // }
+ 
 
     const editSynonyms = (words) =>{
         const synonymList = [...words.synonym];
