@@ -9,10 +9,11 @@ const Synonym = () => {
         document.title="Synonym";
     })
     const [word, setWord] = useState('');
-    const [FlashcardBtn, setFlashcardBtn] = useState(false);
-    const [wordListBtn, setWordListBtn] = useState(true);
+    const [flashcardBtn, setFlashcardBtn] = useState(true);
+    const [wordListBtn, setWordListBtn] = useState(false);
     const [dataNotFound, setDataNotFound] = useState("");
     let url = "https://api.dictionaryapi.dev/api/v2/entries/en_US/" + word;
+    
     const {data} = useFetch(url, {mode: "no-cors"});
     // console.log(data && data[0].meanings[0].definitions[0].synonyms);
     const synonym = data && data[0].meanings[0].definitions[0].synonyms;
@@ -33,6 +34,8 @@ const Synonym = () => {
         setWordListBtn(true);
         setFlashcardBtn(false);
     }
+
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         if(synonym){
@@ -115,11 +118,12 @@ const Synonym = () => {
                 {/* {console.log(word&& word)} */}
             </div>
             <div className="buttons">
-                <button className ="leftBtn" onClick={() => flashCardControl}>Flash Card</button>
-                <button className ="rightBtn" onClick={() => wordListControl}>Word List</button>
+                <button className ="leftBtn" onClick={flashCardControl}>Flash Card</button>
+                <button className ="rightBtn" onClick={wordListControl}>Word List</button>
             </div>
-            {FlashcardBtn && <div className="flashcard">
+            {flashcardBtn && <div className="flashcard">
                 <h1>Flash Cards</h1>
+                {!dispWord && <div className = "dataLoading-msg"> Loading Flash Cards ... It may take a few seconds</div>}
                 {dispWord && <FlashcardComponent dataSource={createFlashCards(dispWord)} />}
             </div>}
 
@@ -133,7 +137,7 @@ const Synonym = () => {
                         </tr>
                     </thead>
                     <tbody className="synonymTable">
-                        { isPendingDisp && <div>Loading...</div> }
+                        { isPendingDisp && <div className = "dataLoading-msg">Loading ... It may take a few seconds</div> }
                         { errorDisp && <div>{ errorDisp }</div> }
                         {dispWord && dispWord.map(renderWords)}
                     </tbody>

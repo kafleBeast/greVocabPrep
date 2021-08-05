@@ -106,6 +106,10 @@
   background: #6262ff;
 }
 
+.Synonym .dataLoading-msg{
+  font-size: 1.2em;
+  color:#00b300;
+}
 
 /*Landing Page*/
 .LandingPage{
@@ -117,7 +121,7 @@
   margin-bottom: 30px;
 }
 .LandingPage .wordCloud{
-  margin: -60px 0 0 -400px;
+  margin: -60px 0 0 -450px;
 }
 
 .LandingPage p{
@@ -191,6 +195,10 @@
   background: #6262ff;
 }
 
+.Definition .dataLoading-msg{
+  font-size: 1.2em;
+  color:#00b300;
+}
 
 /* Quiz Page */
 

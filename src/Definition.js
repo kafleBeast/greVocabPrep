@@ -86,11 +86,12 @@ const Definition = () => {
                 {/* {console.log(word&& word)} */}
             </div>
             <div className="buttons">
-                <button className ="leftBtn" onClick={() => flashCardControl}>Flash Card</button>
-                <button className ="rightBtn" onClick={() => wordListControl}>Word List</button>
+                <button className ="leftBtn" onClick={flashCardControl}>Flash Card</button>
+                <button className ="rightBtn" onClick={wordListControl}>Word List</button>
             </div>
             {FlashcardBtn && <div className="flashcard">
                 <h1>Flash Cards</h1>
+                {!dispWord && <div className = "dataLoading-msg"> Loading Flash Cards ... It may take a few seconds</div>}
                 {dispWord && <FlashcardComponent dataSource={createFlashCards(dispWord)} />}
             </div>}
 
@@ -105,7 +106,7 @@ const Definition = () => {
                         </tr>
                     </thead>
                     <tbody className="definitionTable">
-                        { isPendingDisp && <div>Loading...</div> }
+                        { isPendingDisp && <div className = "dataLoading-msg">Loading ... It may take a few seconds</div> }
                         { errorDisp && <div>{ errorDisp }</div> }
                         {dispWord && dispWord.map(renderWords)}
                     </tbody>

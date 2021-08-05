@@ -1,9 +1,24 @@
 import { useEffect } from "react";
 import ReactWordcloud from 'react-wordcloud';
-import useFetch from './useFetch';
+// import useFetch from './useFetch';
 
 
-
+const wordCloudWords = ["abound","amorphous","belie", "capricious","cerebral","congenial",
+                        "conspicuous","cursory","daunting","deify","didactic","disseminate",
+                        "feasible","flout", "homogeneous","humdrum","insipid","loquacious",
+                        "misanthropic","misnomer","negligent","obsequious","placate",
+                        "proclivity","puerile","quixotic","spendthrift","taciturn",
+                        "wary","austere", "adulterate","advocate","aggrandize","alacrity","ambivalent",
+                        "ameliorate","amenable","anachronistic","audacious","avaricious",
+                        "banal","benign","brazen","calumny","candid","castigate","caustic",
+                        "construe","contrite","convoluted","covet","craven","decorum",
+                        "deft","demur","derivative","dessicate","diatribe","incredulous",
+                        "ingenuous", "adulterate","advocate","aggrandize","alacrity","ambivalent",
+                        "ameliorate","amenable","anachronistic","audacious","avaricious",
+                        "banal","benign","brazen","calumny","candid","castigate","caustic",
+                        "construe","contrite","convoluted","covet","craven","decorum",
+                        "deft","demur","derivative","dessicate","diatribe","incredulous",
+                        "ingenuous" ];
 // const set1Words = ["abound","amorphous","belie", "capricious","cerebral","congenial",
 //             "conspicuous","cursory","daunting","deify","didactic","disseminate",
 //             "feasible","flout", "homogeneous","humdrum","insipid","loquacious",
@@ -31,37 +46,46 @@ import useFetch from './useFetch';
 
 
 const LandingPage = () => {
-    const wordCloud = [];
+    let wordCloud = [];
     const size = [1600, 500];
 
     const randomIntFromInterval = (min, max) => { // min and max included 
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
 
-
-    const { data: words} = useFetch('https://gre-vocab-prep.herokuapp.com/synonyms');
-
-    if(words){
-        for(let i=0; i < words.length; i++){
-            wordCloud.push(
-                {
-                    text: words[i].word,
-                    value: randomIntFromInterval(60,100),
-                }
-            );
-        }
-        
-        for (let i=0; i<words.length;i++){
-            for(let j=0;j<words[i].synonym.length;j++){
-                wordCloud.push(
-                    {
-                        text: words[i].synonym[j],
-                        value: randomIntFromInterval(40,100),
-                    }
-                );
+    for(let i=0; i < wordCloudWords.length; i++){
+        wordCloud.push(
+            {
+                text: wordCloudWords[i],
+                value: randomIntFromInterval(40,100),
             }
-        }
+        );
     }
+
+    // const { data: words} = useFetch('https://gre-vocab-prep.herokuapp.com/synonyms');
+
+    // if(words){
+    //     wordCloud = [];
+    //     for(let i=0; i < words.length; i++){
+    //         wordCloud.push(
+    //             {
+    //                 text: words[i].word,
+    //                 value: randomIntFromInterval(60,100),
+    //             }
+    //         );
+    //     }
+        
+    //     for (let i=0; i<words.length;i++){
+    //         for(let j=0;j<words[i].synonym.length;j++){
+    //             wordCloud.push(
+    //                 {
+    //                     text: words[i].synonym[j],
+    //                     value: randomIntFromInterval(40,100),
+    //                 }
+    //             );
+    //         }
+    //     }
+    // }
     
     
     
