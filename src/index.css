@@ -341,6 +341,23 @@
   border: 1px solid #ddd;
 }
 
+.wordSets button.synonymFlashcardBtn{
+  margin-right: 200px;
+  margin-left: 100px;
+  background-color: #00b300;
+}
+
+.wordSets button.definitionFlashcardBtn{
+  background-color: #00b300;
+}
+
+.wordSets button.synonymFlashcardBtn:hover{
+  background-color: #84df84;
+}
+
+.wordSets button.definitionFlashcardBtn:hover{
+  background-color: #84df84;
+}
 
 .wordSets .buttons .leftBtn{
   margin: 20px 390px 20px 0;

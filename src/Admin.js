@@ -63,7 +63,7 @@ const Admin = () => {
         // fetch('https://json-server-2.herokuapp.com/' + set + Id , {
         //     method: 'DELETE',
         // }).then(res=>res.json())
-        fetch('https://json-server-2.herokuapp.com/set3/1', {
+        fetch('https://json-server-2.herokuapp.com/set1/2', {
             method: 'DELETE',
         }).then(res=>res.json())
         // {console.log("deleted")}

@@ -2,12 +2,15 @@ import useFetch from './useFetch';
 import React from 'react'
 import { useState } from 'react';
 import * as ReactBootStrap from "react-bootstrap";
+import { FlashcardComponent } from 'react-flashcard'
 
 const Sets = () => {
     const [set, setSet] = useState("set1");
     const [wordSetContentControl, setWordSetContentControl] = useState(false);
     const [flashcardBtn, setFlashcardBtn] = useState(false);
     const [wordListBtn, setWordListBtn] = useState(false);
+    const [definitionFlashcardBtn, setDefinitionFlashcardBtn] = useState(false);
+    const [synonymFlashcardBtn, setSynonymFlashcardBtn] = useState(false);
 
     const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('https://json-server-2.herokuapp.com/'+set);
 
@@ -16,18 +19,27 @@ const Sets = () => {
         setFlashcardBtn(true);
         setWordListBtn(false);
     }
-
+    
+    const definitionFlashCardControl = (e) => {
+        e.preventDefault();
+        setDefinitionFlashcardBtn(true);
+        setSynonymFlashcardBtn(false);
+    }
+    const synonymFlashCardControl = (e) => {
+        e.preventDefault();
+        setDefinitionFlashcardBtn(false);
+        setSynonymFlashcardBtn(true);
+    }
     const wordListControl = (e) => {
         e.preventDefault();
         setWordListBtn(true);
         setFlashcardBtn(false);
     }
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
         setWordSetContentControl(true);
-        
+        setWordListBtn(true);
     }
 
     const editSynonyms = (words) =>{
@@ -51,6 +63,38 @@ const Sets = () => {
             </tr>
         );
     };
+    var cardDataDefinition = [];
+
+    const createDefinitionFlashCards = () =>{
+        for (let i=0; i<dispWord.length;i++){
+            cardDataDefinition.push({
+                front:{
+                    text: dispWord[i].word,
+                },
+                back:{
+                    text: dispWord[i].definition + " . . " + dispWord[i].exampleSentence,
+                }
+            })
+        }
+        return cardDataDefinition;
+    }
+    var cardDataSynonym = [];
+
+    const createSynonymFlashCards = () =>{
+        var editedSynonyms = [];
+        for (let i=0; i<dispWord.length;i++){
+            editedSynonyms = editSynonyms(dispWord[i]);
+            cardDataSynonym.push({
+                front:{
+                    text: dispWord[i].word,
+                },
+                back:{
+                    text: editedSynonyms,
+                }
+            })
+        }
+        return cardDataSynonym;
+    }
     return ( 
         <div className="wordSets">
             <div className="selectSets">
@@ -94,8 +138,20 @@ const Sets = () => {
 
             {flashcardBtn && <div className="flashcard">
                 <h1>Flash Cards</h1>
-                {/* {!dispWord && <div className = "dataLoading-msg"> Loading Flash Cards ... It may take a few seconds</div>}
-                {dispWord && <FlashcardComponent dataSource={createFlashCards(dispWord)} />} */}
+                <div className="flashCardButtons">
+                    <button className = "synonymFlashcardBtn" onClick={synonymFlashCardControl}>Synonym</button>
+                    <button className = "definitionFlashcardBtn"onClick={definitionFlashCardControl}>Definition</button>
+
+                </div>
+                { definitionFlashcardBtn && <div>
+                    {!dispWord && <div className = "dataLoading-msg"> Loading Flash Cards ... It may take a few seconds</div>}
+                    {dispWord && <FlashcardComponent dataSource={createDefinitionFlashCards(dispWord)} />}
+                </div>}
+
+                { synonymFlashcardBtn && <div>
+                    {!dispWord && <div className = "dataLoading-msg"> Loading Flash Cards ... It may take a few seconds</div>}
+                    {dispWord && <FlashcardComponent dataSource={createSynonymFlashCards(dispWord)} />}
+                </div>}
             </div>}
 
             {wordListBtn && <div className="displayDefinition">
