@@ -86,10 +86,6 @@
   font-size: 1.2em;
 }
 
-.Synonym .flashcard{
-  margin-top: 20px;
-}
-
 .Synonym .buttons .leftBtn{
   margin: 20px 390px 20px 0;
   background: blue;
@@ -175,10 +171,6 @@
   font-size: 1.2em;
 }
 
-.Definition .flashcard{
-  margin-top: 20px;
-}
-
 .Definition .buttons .leftBtn{
   margin: 20px 390px 20px 0;
   background: blue;
@@ -245,7 +237,7 @@
   border: 1px solid #ddd;
 }
 
-
+/*Admin page*/
 
 .Admin {
   max-width: 600px;
@@ -285,4 +277,88 @@
   display: flex;
   justify-content: center;
   color: blue;
+}
+
+.Admin select {
+  width: 50%;
+  display: flex;
+  padding: 6px 10px;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+}
+/*WordSets page*/
+
+.wordSets {
+  max-width: 600px;
+  margin: -40px auto;
+  padding: 20px;
+}
+
+.wordSets label {
+  text-align: left;
+  display: block;
+}
+.wordSets h1 {
+  text-align: center;
+  font-size: 30px;
+  color: #d90166;
+  margin-bottom: 30px;
+}
+.wordSets input{
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.wordSets button {
+  background: #FF5E5E;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.wordSets button.goButton {
+  margin: 10px auto;
+  padding: 7px;
+  width: 50px;
+  justify-content: center;
+  display: flex;
+}
+
+.wordSets button:hover{
+  background: #ff375a;
+}
+.wordSets select {
+  width: 50%;
+  display: flex;
+  padding: 6px 10px;
+  margin: 10px auto;
+  border: 1px solid #ddd;
+}
+
+
+.wordSets .buttons .leftBtn{
+  margin: 20px 390px 20px 0;
+  background: blue;
+}
+
+.wordSets .buttons .rightBtn{
+  background: blue;
+}
+
+.wordSets .buttons .rightBtn:hover{
+  background: #6262ff;
+}
+.wordSets .buttons .leftBtn:hover{
+  background: #6262ff;
+}
+
+.wordSets .dataLoading-msg{
+  font-size: 1.2em;
+  color:#00b300;
 }

@@ -7,6 +7,7 @@ import Quiz from './Quiz';
 import Synonym from './Synonym';
 import NotFound from './NotFound';
 import Admin from './Admin';
+import WordSets from './WordSets';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
             </Route>
             <Route path="/Admin">
               <Admin />
+            </Route>
+            <Route path="/WordSets">
+              <WordSets />
             </Route>
             <Route path="*">
               <NotFound />

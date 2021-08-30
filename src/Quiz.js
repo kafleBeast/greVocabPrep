@@ -34,6 +34,7 @@ const Quiz = () => {
         }
     }
 
+    
     const editedList = (words) =>{
         let editedSynonyms = [];
         for(let i=0;i<words.length;i++){
@@ -79,41 +80,64 @@ const Quiz = () => {
 
     let synonymsQuizList = quizType==="synonym" && synonymData && createSynonymShuffle(length);
     let answerSynonyms = quizType==="synonym" && synonymData && synonymsQuizList.slice(0,length);
-    let synonymsList = synonymData && answerSynonyms.sort(()=>Math.random() - 0.5);
+    let synonymsList = quizType==="synonym" && synonymData && answerSynonyms.sort(()=>Math.random() - 0.5);
     let wordListS = quizType==="synonym" && synonymData && synonymsQuizList.slice(length, length*2);
 
+    console.log(synonymsQuizList);
+    console.log(answerSynonyms);
+
     let definitionQuizList = definitionData && createDefinitionShuffle(length);
-    let answerDefinition = definitionData && definitionQuizList.slice(0,length);
+    let wordListD = definitionData && definitionQuizList.slice(0,length);
+
+    let answerDefinition = definitionData && definitionQuizList.slice(length, length*2);
     let definitionList = definitionData && answerDefinition.sort(()=>Math.random() - 0.5);
-    let wordListD = definitionData && definitionQuizList.slice(length, length*2);
+
 
 
     // console.log("word: " + definitionQuizList);
 
     let answerChoices = [];
 
-    const answerOnChange = (value) =>{
+    const answerOnChangeDefinition = (value) =>{
         for (let i=0;i<length;i++){
-            if(value===answerSynonyms[i]){
+            if(value.toLowerCase()===answerDefinition[i].toLowerCase()){
                 answerChoices.push(value);
                 break;
             }
         }
     }
-    const renderWords = (words, index) => {
+
+    const answerOnChangeSynonym = (value) =>{
+        for (let i=0;i<length;i++){
+            if(value.toLowerCase()===answerSynonyms[i].toLowerCase()){
+                answerChoices.push(value);
+                break;
+            }
+        }
+    }
+    const renderWordsSynonym = (words, index) => {
         return(
             <tr key = {index}>
                 <td>{words}</td>
-                <td><input type="string" required onChange={(e)=>answerOnChange(e.target.value)}/> </td>
+                <td><input type="string" required onChange={(e)=>answerOnChangeSynonym(e.target.value)}/> </td>
+            </tr>
+        );
+    };
+    const renderWordsDefinition = (words, index) => {
+        return(
+            <tr key = {index}>
+                <td>{words}</td>
+                <td><input type="string" required onChange={(e)=>answerOnChangeDefinition(e.target.value)}/> </td>
             </tr>
         );
     };
     const [quizOutMsg, setQuizOutMsg] = useState("");
+
     const quizResult = (dataType) =>{
         if(answerChoices.length === parseInt(length,10)){
             let count = 0;
             for(let i=0;i<length;i++){
-                if(answerChoices[i]===dataType[i]){
+                if(answerChoices[i].toLowerCase()===dataType[i].toLowerCase()){
                     count = count + 1;
                 }
             }
@@ -178,12 +202,12 @@ const Quiz = () => {
                     <tbody className="synonymTable">
                         { isPendingSynonym && <div>Loading...</div> }
                         { errorSynonym && <div>{ errorSynonym }</div> }
-                        {wordListS && wordListS.map(renderWords)}
+                        {wordListS && wordListS.map(renderWordsSynonym)}
                     </tbody>
                     {<button onClick = {()=>quizResult(answerSynonyms)}>Submit</button>}
                     {<button onClick={()=>window.location.reload()}>Go back</button>}
                 </ReactBootStrap.Table>}
-                {quizResultOut && <div>
+                {synonymQuizControl && quizResultOut && <div>
                     {quizOutMsg}
                     </div>}
             </div>
@@ -203,11 +227,14 @@ const Quiz = () => {
                     <tbody className="synonymTable">
                         { isPendingDefinition && <div>Loading...</div> }
                         { errorDefinition && <div>{ errorDefinition }</div> }
-                        {wordListD && wordListD.map(renderWords)}
+                        {wordListD && wordListD.map(renderWordsDefinition)}
                     </tbody>
-                    {<button>Submit</button>}
+                    {<button onClick = {()=>quizResult(answerDefinition)}>Submit</button>}
                 {<button onClick={()=>window.location.reload()}>Go back</button>}
                 </ReactBootStrap.Table>}
+                {definitionQuizControl && quizResultOut && <div>
+                    {quizOutMsg}
+                    </div>}
             </div>
 
         {/* {console.log(answerChoices)} */}

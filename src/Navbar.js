@@ -10,7 +10,7 @@ const Navbar = () => {
         <Link to="/Definition">Definition</Link>
         <Link to="/Synonym">Synonym</Link>
         <Link to="/Admin">Admin</Link>
-
+        <Link to="/WordSets">Sets</Link>
       </div>
     </nav>
   );
