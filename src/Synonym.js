@@ -20,9 +20,9 @@ const Synonym = () => {
 
     // console.log('word:' + word);
     // console.log(synonym);
-    // const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('https://gre-vocab-prep.herokuapp.com/synonyms');
+    const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('https://gre-vocab-prep.herokuapp.com/synonyms');
 
-    const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('http://localhost:8000/synonyms');
+    // const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('http://localhost:8000/synonyms');
 
     // console.log(dispWord && dispWord);
     const flashCardControl = (e) => {
@@ -50,7 +50,7 @@ const Synonym = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(synonym){
-            fetch("http://localhost:8000/synonyms",{
+            fetch("https://gre-vocab-prep.herokuapp.com/synonyms",{
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({word, synonym})

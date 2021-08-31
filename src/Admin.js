@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from "react";
 import useFetch from './useFetch';
 
-// json-server:  https://json-server-2.herokuapp.com/
+// json-server:  https://json-server-sets.herokuapp.com/
 const Admin = () => {
     const id = "kaflebeast";
     const pass = "koenigsegg";
@@ -53,17 +53,17 @@ const Admin = () => {
     const addWord = (e) =>{
         e.preventDefault();
         setContentBtnControl(true);
-        fetch("https://json-server-2.herokuapp.com/" + set,{
+        fetch("https://json-server-sets.herokuapp.com/" + set,{
         method: 'POST',
          headers: { "Content-Type": "application/json" },
          body: JSON.stringify({word, synonym, definition, exampleSentence})
         })
     }
     const handleDelete = () => {
-        // fetch('https://json-server-2.herokuapp.com/' + set + Id , {
+        // fetch('https://json-server-sets.herokuapp.com/' + set + Id , {
         //     method: 'DELETE',
         // }).then(res=>res.json())
-        fetch('https://json-server-2.herokuapp.com/set1/2', {
+        fetch('https://json-server-sets.herokuapp.com/set1/2', {
             method: 'DELETE',
         }).then(res=>res.json())
         // {console.log("deleted")}

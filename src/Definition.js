@@ -18,9 +18,9 @@ const Definition = () => {
 
     const exampleSentence = data && data[0].meanings[0].definitions[0].example;
 
-    // const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('https://gre-vocab-prep.herokuapp.com/definitions');
+    const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('https://gre-vocab-prep.herokuapp.com/definitions');
 
-    const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('http://localhost:8000/definitions');
+    // const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('http://localhost:8000/definitions');
 
     const flashCardControl = (e) => {
         e.preventDefault();
@@ -36,7 +36,7 @@ const Definition = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        fetch("http://localhost:8000/definitions",{
+        fetch("https://gre-vocab-prep.herokuapp.com/definitions",{
         method: 'POST',
          headers: { "Content-Type": "application/json" },
          body: JSON.stringify({word, definition, exampleSentence})
