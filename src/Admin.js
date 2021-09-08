@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from "react";
 import useFetch from './useFetch';
 
-// json-server:  https://json-server-sets.herokuapp.com/
+// json-server:  https://json-server-sets.herokuapp.com/ This server flushes out the data everytime the dyno is restarts
+// Hence, using azure for json server hosting. 
 const Admin = () => {
     const id = "kaflebeast";
     const pass = "koenigsegg";
@@ -181,7 +182,7 @@ const Admin = () => {
                         <h1>Delete Words</h1>
                         <div className="dataNotFound">{deleteMsg}</div>
                         <form onSubmit={addWord}>
-                        <select value = {set} onChange = {(e) => setDeleteSet(e.target.value)}>
+                        <select value = {deleteSet} onChange = {(e) => setDeleteSet(e.target.value)}>
                                 <option value="set1">Set 1</option>
                                 <option value="set2">Set 2</option>
                                 <option value="set3">Set 3</option>
