@@ -15,13 +15,15 @@ const Admin = () => {
     const[addWordBtn, setAddWordBtn] = useState(false);
     const[editWordBtn, setEditWordBtn] = useState(false);
     const[set, setSet] = useState("set1");
-
+    const [dataNotFound, setDataNotFound] = useState("");
+    const [setId, setSetId] = useState(1);
+    const [deleteSet, setDeleteSet] = useState("set1");
     let url = "https://api.dictionaryapi.dev/api/v2/entries/en_US/" + word;
     const {data} = useFetch(url, {mode: "no-cors"});
     const synonym = data && data[0].meanings[0].definitions[0].synonyms;
     const definition = data && data[0].meanings[0].definitions[0].definition;
     const exampleSentence = data && data[0].meanings[0].definitions[0].example;
-
+    const [deleteMsg, setDeleteMsg] = useState("");
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -53,19 +55,27 @@ const Admin = () => {
     const addWord = (e) =>{
         e.preventDefault();
         setContentBtnControl(true);
-        fetch("https://json-server-sets.herokuapp.com/" + set,{
-        method: 'POST',
-         headers: { "Content-Type": "application/json" },
-         body: JSON.stringify({word, synonym, definition, exampleSentence})
-        })
+        if(data && word.toLowerCase() === data[0].word){
+            fetch("https://grejsonserver.azurewebsites.net/" + set,{
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({word, synonym, definition, exampleSentence})
+            });
+            setDataNotFound("Word Added!");
+        }
+        else{
+            setDataNotFound("Sorry, we cannot find the word on the Internet.");
+        }
+        
     }
     const handleDelete = () => {
         // fetch('https://json-server-sets.herokuapp.com/' + set + Id , {
         //     method: 'DELETE',
         // }).then(res=>res.json())
-        fetch('https://json-server-sets.herokuapp.com/set1/2', {
+        fetch('https://grejsonserver.azurewebsites.net/' + deleteSet + '/' + setId, {
             method: 'DELETE',
         }).then(res=>res.json())
+        setDeleteMsg("The word has been deleted");
         // {console.log("deleted")}
     }
     
@@ -74,12 +84,14 @@ const Admin = () => {
         setContentBtnControl(true);
         setAddWordBtn(true);
         setEditWordBtn(false);
+        setDeleteMsg("");
     }
     const editWordControl = (e) => {
         e.preventDefault();
         setContentBtnControl(true);
         setEditWordBtn(true);
         setAddWordBtn(false);
+        setDataNotFound("");
     }
 
     
@@ -125,6 +137,7 @@ const Admin = () => {
                 <div className="adminContents">
                     {addWordBtn && <div className="addWords">
                         <h1>Add Words</h1>
+                        {dataNotFound && <div className="dataNotFound">{dataNotFound}</div>}
                         <form onSubmit={addWord}>
                             <select value = {set} onChange = {(e) => setSet(e.target.value)}>
                                 <option value="set1">Set 1</option>
@@ -165,7 +178,38 @@ const Admin = () => {
                     </div>}
 
                     {editWordBtn && <div className="editWords">
-                        <h2>Edit Word Section (Delete the words)</h2>
+                        <h1>Delete Words</h1>
+                        <div className="dataNotFound">{deleteMsg}</div>
+                        <form onSubmit={addWord}>
+                        <select value = {set} onChange = {(e) => setDeleteSet(e.target.value)}>
+                                <option value="set1">Set 1</option>
+                                <option value="set2">Set 2</option>
+                                <option value="set3">Set 3</option>
+                                <option value="set4">Set 4</option>
+                                <option value="set5">Set 5</option>
+                                <option value="set6">Set 6</option>
+                                <option value="set7">Set 7</option>
+                                <option value="set8">Set 8</option>
+                                <option value="set9">Set 9</option>
+                                <option value="set10">Set 10</option>
+                                <option value="set11">Set 11</option>
+                                <option value="set12">Set 12</option>
+                                <option value="set13">Set 13</option>
+                                <option value="set14">Set 14</option>
+                                <option value="set15">Set 15</option>
+                                <option value="set16">Set 16</option>
+                                <option value="set17">Set 17</option>
+                                <option value="set18">Set 18</option>
+                                <option value="set19">Set 19</option>
+                                <option value="set20">Set 20</option>
+                            </select>
+                            <input 
+                            required 
+                            value={setId}
+                            placeholder = {"Id"}
+                            onChange={(e) => setSetId(e.target.value)}
+                            />
+                        </form>
                         <button onClick={handleDelete}>Delete</button>
                         <button onClick={()=>setContentBtnControl(false)}>Go back</button>
                     </div>}

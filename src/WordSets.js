@@ -12,7 +12,7 @@ const Sets = () => {
     const [definitionFlashcardBtn, setDefinitionFlashcardBtn] = useState(false);
     const [synonymFlashcardBtn, setSynonymFlashcardBtn] = useState(false);
 
-    const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('https://json-server-sets.herokuapp.com/'+set);
+    const { data: dispWord, error:errorDisp, isPending:isPendingDisp } = useFetch('https://grejsonserver.azurewebsites.net/'+set);
 
     const flashCardControl = (e) => {
         e.preventDefault();
