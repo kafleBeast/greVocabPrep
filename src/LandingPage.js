@@ -100,7 +100,7 @@ const LandingPage = () => {
     })
     return ( 
         <div className="LandingPage">
-            <h1>Vocabulary, thy wretched adversary!</h1>
+            <h1>Vocabulary, thou wretched adversary!</h1>
             <div className="LandingPage-content">
                 {/* <p>Fellow GRE Test takers, welcome to my site. You can use this 
                     site to train your Vocabulary skills (Definition and Synonyms).
